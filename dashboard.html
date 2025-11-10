@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account Center - Garena</title>
+    <style>
+        :root{--muted:#88939a;--border:#e9ecef;--accent:#ee3d48;--bg:#f6f7f8}
+        body{font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial; margin:0;background:var(--bg);color:#222}
+        .container{max-width:1100px;margin:18px auto;padding:0 18px}
+
+        /* header */
+        .topbar{display:flex;align-items:center;justify-content:space-between;background:white;padding:14px 18px;border-radius:6px;border:1px solid var(--border)}
+        .brand{display:flex;align-items:center;gap:12px}
+        .brand img{height:28px}
+        .brand h1{margin:0;font-size:18px;color:var(--accent);font-weight:600}
+        .user-controls{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14px}
+
+        /* tabs */
+        .tabs{display:flex;gap:28px;margin-top:12px}
+        .tabs a{padding:12px 6px;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent}
+        .tabs a.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+
+        /* layout */
+        .content{display:flex;gap:24px;margin-top:18px}
+        .sidebar{width:260px}
+        .card{background:white;border:1px solid var(--border);border-radius:6px;padding:18px}
+        .avatar{display:flex;gap:12px;align-items:center}
+        .avatar img{width:64px;height:64px;border-radius:6px}
+        .meta h3{margin:0;font-size:15px}
+        .meta .id{color:var(--muted);font-size:13px;margin-top:6px}
+
+        .main{flex:1}
+        .panel{background:white;border:1px solid var(--border);border-radius:6px;padding:18px;margin-bottom:18px}
+        .panel h3{margin:0 0 12px 0;font-size:15px}
+
+        /* security donut */
+        .security{display:flex;gap:18px;align-items:center}
+        .donut{width:120px;height:120px;border-radius:50%;background:conic-gradient(#ff9e3b 0 60%, #eee 60%);display:flex;align-items:center;justify-content:center;font-weight:700;color:#666}
+        .sec-list{flex:1}
+
+        table{width:100%;border-collapse:collapse;font-size:13px}
+        thead th{background:#fbfdfe;color:var(--muted);text-align:left;padding:12px;border-bottom:1px solid var(--border);font-weight:600}
+        tbody td{padding:14px;border-bottom:1px solid var(--border);vertical-align:top}
+        tbody tr:last-child td{border-bottom:none}
+
+        footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+
+        @media(max-width:900px){.content{flex-direction:column}.sidebar{width:100%}.container{padding:0 12px}}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="topbar">
+        <div class="brand">
+            <img src="image/200X200_GARENA.jpg" alt="Garena">
+            <h1>Account Center</h1>
+        </div>
+        <div class="user-controls">
+            <div><strong>admin</strong></div>
+            <div style="padding:6px 10px;border-radius:18px;border:1px solid var(--border);background:#fff;cursor:pointer" id="logout-btn">Đăng xuất</div>
+            <div style="color:var(--muted)">Vietnam ▾</div>
+        </div>
+    </div>
+
+    <nav class="tabs">
+        <a href="#" class="active">Trang chủ</a>
+        <a href="#">Bảo mật</a>
+        <a href="#">FAQ</a>
+    </nav>
+
+    <div class="content">
+        <aside class="sidebar">
+            <div class="card">
+                <div class="avatar">
+                    <img src="image/images.png" alt="avatar">
+                    <div class="meta">
+                        <h3>Vĩnh Ân (Mã NV:714074)</h3>
+                        <div class="id">453042183</div>
+                    </div>
+                </div>
+                <div style="margin-top:12px;color:var(--muted);font-size:13px">0 <span style="color:#ffb84d;margin-left:8px">●</span></div>
+                <hr style="margin:12px 0;border-color:var(--border)">
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+                    <a href="#">Thay đổi Mật khẩu</a>
+                    <a href="#">+84 ****1356 <span style="color:var(--accent);float:right;border:1px solid var(--border);padding:4px 8px;border-radius:12px;font-size:12px">Thay đổi</span></a>
+                    <a href="#">Thêm Email</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="panel">
+                <h3>THÔNG BÁO QUAN TRỌNG</h3>
+                <div style="color:#e04b4b;margin-top:8px;font-size:14px">Hoạt động đăng nhập lần cuối của bạn đáng nghi ngờ. Chúng tôi khuyên bạn nên:</div>
+                <ul style="margin-top:8px;color:var(--muted)">
+                    <li>Thay đổi mật khẩu thành mật khẩu mạnh hơn</li>
+                </ul>
+                <div style="margin-top:8px"><a href="#">Đó là tôi, không hiện thị lại thông báo này</a></div>
+            </div>
+
+            <div class="panel">
+                <h3>MỨC ĐỘ BẢO MẬT</h3>
+                <div class="security">
+                    <div class="donut">THẤP</div>
+                    <div class="sec-list">
+                        <p style="margin:0;color:var(--muted)">Hành động ngay để tăng cường mức độ bảo mật tài khoản của bạn.</p>
+                        <div style="margin-top:8px;display:flex;gap:8px">
+                            <button style="background:#fff;border:1px solid var(--border);padding:6px 10px;border-radius:14px;color:var(--accent)">Hành động</button>
+                            <button style="background:#fff;border:1px solid var(--border);padding:6px 10px;border-radius:14px">Thêm</button>
+                            <button style="background:#fff;border:1px solid var(--border);padding:6px 10px;border-radius:14px">Tăng cường</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>HOẠT ĐỘNG TÀI KHOẢN</h3>
+                <div class="small">Hãy kiểm tra 3 hoạt động tài khoản gần nhất của bạn.</div>
+                <table>
+                    <thead>
+                        <tr><th>Ngày Tháng</th><th>Quốc Gia</th><th>IP</th><th>Hoạt động</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2019-03-27 22:10:3<br><span class="small">GMT+7</span></td>
+                            <td>VN</td>
+                            <td>113.185.32.115</td>
+                            <td>Thay đổi mật khẩu</td>
+                        </tr>
+                        <tr>
+                            <td>2019-03-12 20:13:17<br><span class="small">GMT+7</span></td>
+                            <td>VN</td>
+                            <td>59.153.233.193</td>
+                            <td>Thay đổi mật khẩu</td>
+                        </tr>
+                        <tr>
+                            <td>2019-02-19 16:6:22<br><span class="small">GMT+7</span></td>
+                            <td>VN</td>
+                            <td>59.153.252.126</td>
+                            <td>Thay đổi số điện thoại</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="panel">
+                <h3>LỊCH SỬ ĐĂNG NHẬP</h3>
+                <div class="small">Kiểm tra 3 lần đăng nhập mới nhất. Hãy thay đổi mật khẩu ngay nếu bạn thấy có sự khác thường.</div>
+                <table>
+                    <thead>
+                        <tr><th>Ngày Tháng</th><th>Quốc Gia</th><th>IP</th><th>Nguồn</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-11-10 8:49:23<br><span class="small">GMT+7</span></td>
+                            <td>VN</td>
+                            <td>42.1.90.129</td>
+                            <td>Garena Account Center</td>
+                        </tr>
+                        <tr>
+                            <td>2025-11-10 4:55:9<br><span class="small">GMT+7</span></td>
+                            <td>VN</td>
+                            <td>14.225.211.88</td>
+                            <td>Payment Center</td>
+                        </tr>
+                        <tr>
+                            <td>2025-11-10 4:55:4<br><span class="small">GMT+7</span></td>
+                            <td>VN</td>
+                            <td>171.241.66.25</td>
+                            <td>Garena Mobile</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <footer>
+                <div style="color:var(--muted);font-size:13px">Copyright © Garena Online. Trademarks belong to their respective owners. All rights reserved.</div>
+                <div style="margin-top:8px;color:var(--muted);font-size:13px"><a href="#">Điều Khoản Sử Dụng</a> | <a href="#">Chính Sách Riêng Tư</a></div>
+            </footer>
+        </main>
+    </div>
+</div>
+<script>
+    // simple logout to go back to login page
+    document.getElementById('logout-btn').addEventListener('click', function(){
+        window.location.href = 'login.html';
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Đăng nhập - Garena</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .top-right img {
+            width: 20px;
+            height: 20px;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input::placeholder {
+            color: #999;
+        }
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .forgot-password a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ee3d48;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .create-account {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .create-account a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .terms {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        .terms a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="image/200X200_GARENA.jpg" alt="Garena">
+    </div>
+    <div class="top-right">
+        <span>Việt Nam · Tiếng việt</span>
+        <img src="image/images (1).png" alt="Language">
+    </div>
+
+    <div class="main-content">
+        <div class="login-container">
+            <h1 class="login-title">Đăng nhập</h1>
+            <input type="text" id="username" placeholder="Tên đăng nhập hoặc Email" />
+            <input type="password" id="password" placeholder="Mật khẩu" />
+            <div class="forgot-password">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+            <button class="login-button" onclick="login()">Đăng Nhập Ngay</button>
+            <div class="create-account">
+                <a href="#">Tạo tài khoản mới</a>
+            </div>
+            <div class="terms">
+                <a href="#">Điều Khoản Dịch Vụ</a> và <a href="#">Chính Sách Bảo Mật</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if (user === "admin" && pass === "123") {
+                // Redirect to the dashboard page after successful login
+                window.location.href = 'dashboard.html';
+            } else {
+                alert("Sai tài khoản hoặc mật khẩu!");
+            }
+        }
+    </script>
+</body>
+</html>
